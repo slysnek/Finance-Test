@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<form action="/quote" method="post">
+    <input autocomplete="off" autofocus class="form-control" name="stock" placeholder="stock name" type="text">
+    <p></p>
+    <button class="btn btn-primary" type="submit">Find a stock</button>
+    {% if results %}
+    <p>
+        {{ text }}
+    </p>
+    {% endif %}
+</form>
+
+{% endblock %}
